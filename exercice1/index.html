@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Additionneur</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="../assets/css/vendor/materialize.css" rel="stylesheet">
+    </head>
+    <body class="grey lighten-3">
+        <h1 class="center-align">Additionneur</h1>
+        <main class="container" role="main">
+            <section id="app"  class="row z-depth-1 white section">
+                <label class="col s8 offset-s2" for="number1">
+                    <input 
+                        type="number" 
+                        name="number1" 
+                        id="number1"
+                        v-model.number="number1"
+                        @change="add"
+                    >
+                </label>
+                <div class="col s4 offset-s4 center-align">
+                    <i class="medium material-icons">add</i>
+                </div>   
+                <label class="col s8 offset-s2" for="number2">
+                    <input 
+                        type="number" 
+                        name="number2" 
+                        id="number2" 
+                        value="0"
+                        v-model.number="number2"
+                        @change="add"
+                    >
+                </label>
+                <div class="col s4 offset-s4 center-align">
+                    <i class="medium material-icons">drag_handle</i>
+                </div> 
+                <h2 class="col s12 center-align grey darken-3 z-depth-1 white-text">{{result}}</h2>
+            </section> 
+
+        </main> 
+
+        <script src="../assets/js/vendor/materialize.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="../assets/js/index.js"></script>
+    </body>
+</html>
