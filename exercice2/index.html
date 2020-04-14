@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Magic Number</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../assets/css/vendor/materialize.css" rel="stylesheet">
+</head>
+<body class="grey lighten-3">
+<h1 class="center-align">Magic Number</h1>
+<main class="container" role="main">
+    <section id="app2"  class="row z-depth-1 white section">
+        <article class="center-align green-text flow-text">
+            Trouvez le nombre entre 0 et 100
+        </article>
+        <label class="col s8 offset-s2" for="number">
+            <input
+                    type="number"
+                    name="number"
+                    id="number"
+                    v-model.number="number"
+                    @change="verify"
+            >
+        </label>
+        <h2 class="col s12 center-align grey darken-3 z-depth-1 white-text">{{message}}</h2>
+        <div class="col s12 center-align">
+            <input
+                    class="btn"
+                    type="button"
+                    value="Nouveau Nombre"
+                    @click="newNumber"
+            >
+        </div>
+    </section>
+
+</main>
+
+<script src="../assets/js/vendor/materialize.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="../assets/js/index.js"></script>
+</body>
+</html>
