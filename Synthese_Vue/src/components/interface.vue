@@ -5,7 +5,7 @@
         <h2 class="center-align">Cliquez</h2>
         <input class="btn red" type="button" value="Cliquez" @click="change">
       </div>
-      <div class="center-align" v-else="checked">
+      <div class="center-align" v-else>
         <h2 class="center-align">WTF ?! Un bouton qui change de couleur !!</h2>
         <input class="btn blue" type="button" value="Revenir" @click="change">
       </div>
@@ -14,17 +14,17 @@
 </template>
 
 <script>
-  export default {
-    name: 'changebox',
-    data () {
-      return {
-        checked: true
-      }
-    },
-    methods: {
-      change: function (event) {
-        this.checked = !this.checked;
-      }
+export default {
+  name: 'changebox',
+  data () {
+    return {
+      checked: true
+    }
+  },
+  methods: {
+    change: function (event) {
+      this.checked = !this.checked
     }
   }
+}
 </script>

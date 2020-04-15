@@ -28,27 +28,27 @@
 </template>
 
 <script>
-  let magicNumber = parseInt(Math.random()*100);
-  export default {
-    name: 'magic',
-    data () {
-      return {
-        number: 0,
-        magicMessage: 'Entrez un nombre'
-      }
+let magicNumber = parseInt(Math.random() * 100)
+export default {
+  name: 'magic',
+  data () {
+    return {
+      number: 0,
+      magicMessage: 'Entrez un nombre'
+    }
+  },
+  methods: {
+    verify: function (event) {
+      this.magicMessage = magicNumber < this.number
+        ? 'Plus petit'
+        : (magicNumber > this.number
+          ? 'Plus grand'
+          : 'BRAVO !!')
     },
-    methods: {
-      verify: function (event) {
-        this.magicMessage = magicNumber < this.number
-          ? 'Plus petit'
-          : (magicNumber > this.number
-            ? 'Plus grand'
-            : 'BRAVO !!');
-      },
-      newNumber: function (event) {
-        magicNumber = parseInt(Math.random()*100);
-        this.magicMessage = 'Entrez un nombre';
-      }
+    newNumber: function (event) {
+      magicNumber = parseInt(Math.random() * 100)
+      this.magicMessage = 'Entrez un nombre'
     }
   }
+}
 </script>
