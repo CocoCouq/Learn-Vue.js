@@ -9,11 +9,11 @@
 </template>
 
 <script>
-  import index from './components/index'
-  import addition from './components/addition'
-  import magic from './components/magic'
-  import calculator from './components/calculator'
-  import changebox from './components/interface'
+import index from './components/index'
+import addition from './components/addition'
+import magic from './components/magic'
+import calculator from './components/calculator'
+import changebox from './components/interface'
 
 export default {
   name: 'App',
@@ -29,7 +29,7 @@ export default {
       appAdd: false,
       appMag: false,
       appCal: false,
-      appInt: true
+      appInt: false
     }
   }
 }
