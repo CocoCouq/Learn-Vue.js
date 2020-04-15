@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Calculatrice</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../assets/css/vendor/materialize.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+<body class="grey lighten-3">
+<h1 class="center-align">Calculatrice</h1>
+<main class="container" role="main">
+    <section id="app2"  class="row z-depth-1 white section">
+        <article class="center-align green-text flow-text">
+            Entrez une opération
+        </article>
+        <div id="app" class="green lighten-2 container">
+            <article class="row valign-wrapper">
+                <span class="bigText">
+                    {{operator}}
+                </span>
+                <h2 class="col s6 offset-s3 z-depth-2 white right-align bigText">
+                    {{display}}
+                </h2>
+            </article>
+            <article class="row section">
+
+                <p
+                        class="btnCalcul btn-large col s4"
+                        v-for="number in numbers"
+                        @click="addNum(number)"
+                >
+                    {{number}}
+                </p>
+                <p
+                        class="btnCalcul btn-large blue col s2"
+                        v-for="op in ops"
+                        @click="calc(op)"
+                >
+                    {{op}}
+                </p>
+
+                <p
+                        class="btnCalcul btn-large red col s2"
+                        @click="clear"
+                >
+                    Clear
+                </p>
+            </article>
+        </div>
+    </section>
+
+</main>
+
+<script src="../assets/js/vendor/materialize.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
